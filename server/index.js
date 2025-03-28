@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://nexus-client-phi.vercel.app",
+    origin: ["https://nexus-client-phi.vercel.app","https://www.nexus25.com"],
     credentials: true,
   })
 );
