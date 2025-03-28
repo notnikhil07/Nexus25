@@ -4,6 +4,8 @@
   "main": "server/index.js",
   "scripts": {
     "dev": "nodemon server/index.js",
+    "start":"node server/index.js",
+    "build":"node server/index.js",
     "prod":"cd client && npm run dev"
   },
   "type": "module",
