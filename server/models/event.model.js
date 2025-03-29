@@ -38,6 +38,11 @@ const eventRegistrationSchema = new mongoose.Schema(
       required: true,
     },
     teamName: { type: String },
+    tshirtSize: {
+      type: String,
+      enum: ["S", "M", "L", "XL", "XXL"],
+      required: true,
+    },
     paymentProof: { type: String, required: true },
   },
   { timestamps: true }
