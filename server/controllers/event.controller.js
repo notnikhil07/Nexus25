@@ -14,6 +14,7 @@ export const register = async (req, res) => {
       batch,
       events, // This should be an array
       teamName,
+      tshirtSize,
     } = req.body;
 
     const paymentProof = req.files?.paymentProof;
@@ -28,7 +29,8 @@ export const register = async (req, res) => {
       !batch ||
       !events ||
       events.length === 0 || // Ensure events is not empty
-      !paymentProof
+      !paymentProof ||
+      !tshirtSize
     ) {
       return res
         .status(400)
@@ -57,6 +59,7 @@ export const register = async (req, res) => {
       event: events, // Store array of selected events
       teamName,
       paymentProof: paymentProofUrl,
+      tshirtSize,
     });
 
     await newRegistration.save();
