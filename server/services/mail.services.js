@@ -1,7 +1,7 @@
 import sendMail from "../utilities/nodemailer.js";
 
 export const verificationMail = async (email, verificationToken) => {
-  const Template = `Nexus Verification Token : ${verificationToken}`;
+  const Template = ` We're excited to have you on board. Get ready to explore, connect, and grow with Nexus.`;
 
   sendMail(email, "Nexus 📦⚡", ``, Template);
 };
